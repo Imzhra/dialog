@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-table dir="rtl" class="v-table" >
+  <v-container style="font-family: 'IranSansWeb', sans-serif">
+    <v-data-table dir="rtl" class="v-table" >
       <thead>
         <tr>
           <th class="text-right v-th">نام</th>
@@ -34,11 +34,11 @@
           </td>
         </tr>
       </tbody>
-    </v-table>
+    </v-data-table>
 
     <!-- detail dialog-->
     <v-dialog v-model="dialog2" max-width="500px" class="v-dialog">
-      <v-card  class="v-card">
+      <v-card  class="v-card" style="font-family: 'IranSansWeb', sans-serif">
         <v-col cols=2>
           <v-btn @click="dialog2 = false">
             <v-icon>fas fa-close بستن</v-icon>
@@ -52,7 +52,8 @@
           <div><strong>نام خانوادگی:</strong> {{ selectedItem.lastname }}</div>
           <div><strong>سن:</strong> {{ selectedItem.age }}</div>
           <div><strong>شغل:</strong> {{ selectedItem.job }}</div>
-          <div><strong>جنسیت:</strong> {{ selectedItem.gender }}</div>
+          <div><strong>تحصیلات:</strong> {{ selectedItem.education }}</div>
+          <div><strong>جنسیت:</strong>{{ selectedItem.gender }}</div>
           <div><strong>آدرس:</strong> {{ selectedItem.address }}</div>
           <div><strong>تلفن:</strong> {{ selectedItem.phonenumber }}</div>
         </v-card-text>
@@ -71,7 +72,9 @@
 
         <!-- form dialog-->
         <v-dialog v-model="dialog" max-width="90%" width="800px" class="v-dialog">
-          <v-card  class="v-card" max-width="800px" style="height: 400px;" title="اطلاعات خود را وارد کنید" prepend-icon="fas fa-user" dir="rtl">
+          <v-card  class="v-card" max-width="800px" 
+          style="height: 750px;border-radius: 70px; font-family: 'IranSansWeb', sans-serif" 
+          title="اطلاعات خود را وارد کنید" prepend-icon="fas fa-user" dir="rtl">
             <v-form dir="rtl">
               <v-row>
                 <v-col cols="6">
@@ -90,13 +93,22 @@
                   <v-text-field v-model="newItem.job" label="شغل"></v-text-field>
                 </v-col>
                 <v-col cols="6">
-                  <v-text-field v-model="newItem.gender" label="جنسیت"></v-text-field>
+                  <v-select v-model="newItem.education"
+                  label="تحصیلات"
+                  :items="['دیپلم','لیسانس','فوق لیسانس','دکتری']">
+                  </v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="newItem.phonenumber" label="تلفن"></v-text-field>
                 </v-col>
                 <v-col cols="6">
                   <v-text-field v-model="newItem.address" label="آدرس"></v-text-field>
                 </v-col>
-                <v-col cols="6">
-                  <v-text-field v-model="newItem.phonenumber" label="تلفن"></v-text-field>
+                <v-col cols="2">
+                  <v-radio-group v-model="newItem.gender">جنسیت
+                    <v-radio label="زن" value="زن" class="v-radio"></v-radio>
+                    <v-radio label="مرد" value="مرد" class="v-radio"></v-radio>
+                  </v-radio-group>
                 </v-col>
                 <v-col cols="6"></v-col>
                 <v-col cols="5"></v-col>
@@ -114,7 +126,9 @@
         <!-- edit dialog-->
         <v-dialog v-model="editDialogVisible" max-width="90%" width="800px" class="v-dialog">
           
-          <v-card max-width="800px" title="ویرایش اطلاعات" prepend-icon="fas fa-edit" dir="rtl" class="v-card">
+          <v-card max-width="800px" title="ویرایش اطلاعات"
+           prepend-icon="fas fa-edit" dir="rtl" class="v-card" 
+           style="height: 750px;border-radius: 70px;font-family: 'IranSansWeb', sans-serif">
             <v-form dir="rtl" >
               <v-row>
                 <v-col cols="6">
@@ -133,13 +147,23 @@
                   <v-text-field v-model="editItem.job" label="شغل"></v-text-field>
                 </v-col>
                 <v-col cols="6">
-                  <v-text-field v-model="editItem.gender" label="جنسیت"></v-text-field>
+                  <v-select v-model="editItem.education"
+                  label="تحصیلات"
+                  :items="['دیپلم','لیسانس','فوق لیسانس','دکتری']">
+                  </v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field v-model="editItem.phonenumber" label="تلفن"></v-text-field>
                 </v-col>
                 <v-col cols="6">
                   <v-text-field v-model="editItem.address" label="آدرس"></v-text-field>
                 </v-col>
-                <v-col cols="6">
-                  <v-text-field v-model="editItem.phonenumber" label="تلفن"></v-text-field>
+                <v-col cols="2">
+                  <v-radio-group v-model="editItem.gender">جنسیت
+                    <v-radio label="زن" value="زن" class="v-radio"></v-radio>
+                    <v-radio label="مرد" value="مرد" class="v-radio"></v-radio>
+                  </v-radio-group>
+                  
                 </v-col>
                 <v-col cols="6"></v-col>
                 <v-col cols="5"></v-col>
@@ -156,16 +180,24 @@
 
       
     </v-row>
+    <v-snackbar v-model="showToastMessage" 
+    :timeout="2000" :color="toastColor" rounded="pill">
+    {{ toastMessage }}
+  </v-snackbar>
   </v-container>
 </template>
 
 <script>
 export default {
   data: () => ({
+    showToastMessage: false , 
+    toastMessage : '',
+    toastColor :'success',
+
     dialog: false,
     dialog2: false,
     editDialogVisible: false, 
-    newItem: { id:'',name: '', lastname: '', age: '', job: '', gender: '', address: '', phonenumber: '' },
+    newItem: { id:'',name: '', lastname: '', age: '', job: '', gender: '', address: '', phonenumber: '',education:'' },
     editItem: {}, 
     items: [],
     selectedItem: {},
@@ -175,28 +207,35 @@ export default {
     this.loadItems(); 
   },
   methods: {
+      showSuccessToast()  {
+        this.showToastMessage= true;
+        this.toastMessage= 'انجام شد';
+        this.toastColor= 'success'
+  },
+      showErrorToast(){
+        this.showToastMessage= true;
+        this.toastMessage= 'اطلاعات را کامل وارد کنید';
+        this.toastColor= 'error'
+  },
   deleteItems(item) {
     const index = this.items.indexOf(item);
     if (index > -1) {
       this.items.splice(index, 1);
     }
-
-  // سایر متدها
-},
-
-
+  },
     saveItem() {
-      if (!this.newItem.name || !this.newItem.lastname || !this.newItem.age || !this.newItem.job || !this.newItem.gender || !this.newItem.address || !this.newItem.phonenumber || !this.newItem.id ) {
-      alert('لطفاً تمامی فیلدها را پر کنید.'); 
+      if (!this.newItem.name || !this.newItem.lastname || !this.newItem.age || !this.newItem.job || !this.newItem.gender || !this.newItem.address || !this.newItem.phonenumber || !this.newItem.id ||!this.newItem.education) {
+      this.showErrorToast(); 
       return; 
     }
       this.items.push({ ...this.newItem });
       this.saveItems(); 
-      this.newItem = { id:'',name: '', lastname: '', age: '', job: '', gender: '', address: '', phonenumber: '' };
+      this.newItem = { id:'',name: '', lastname: '', age: '', job: '', gender: '', address: '', phonenumber: '' ,education:''};
       this.dialog = false;
     },
     saveItems() {
       localStorage.setItem('items', JSON.stringify(this.items)); 
+      this.showSuccessToast();
     },
     loadItems() {
       const data = localStorage.getItem('items'); 
@@ -212,19 +251,21 @@ export default {
       this.editItem = { ...item }; 
       this.editDialogVisible = true; 
     },
+
     updateItem() {
       const index = this.items.findIndex(i => i.id === this.editItem.id); // پیدا کردن ایندکس آیتم برای ویرایش
       if (index !== -1) {
         this.items.splice(index, 1, this.editItem); 
         this.saveItems(); 
         this.editDialogVisible = false; 
+        this.showSuccessToast();
       }
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 .v-th {
   font-size: 30px;
 }
@@ -232,12 +273,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(2px);
 }
-.v-card{
-  background-image: url(@/assets/dialog.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 50vh; 
+.v-card{ 
   color: black;
 }
 .v-table {
@@ -251,15 +287,6 @@ export default {
 .v-btn{
   border-radius: 50px;
 }
-
-
-.v-container {
-  background-image: url(@/assets/user.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; 
-}
 .v-text-field{
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);
@@ -270,6 +297,19 @@ export default {
   backdrop-filter: blur(10px);
   border-radius: 50px;
 }
+.v-radio{
+  display: inline-block;
+  margin-right: 10px;
+
+}
+@font-face {
+       font-family: 'IRANSansWeb';
+       src: url('@/assets/IRANSansWeb.ttf') format('truetype');
+       font-weight: normal;
+       font-style: normal;
+   }
+   
+
 
 </style>
 
