@@ -42,7 +42,7 @@
         <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
       </v-col>
         <v-col cols="4">
-          <h4 dir="rtl" style="text-align: right; color: blue;">نام پیمانکار/مشاور/آزمایشگاه:</h4>
+          <h4 dir="rtl" style="text-align: right; color: black;">نام پیمانکار/مشاور/آزمایشگاه:</h4>
       </v-col>
     </v-row>
     
@@ -53,25 +53,25 @@
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h4 dir="rtl" style="text-align: right; color: blue;">مبلغ اولیه قرارداد:</h4>
+          <h4 dir="rtl" style="text-align: right; color: black;">مبلغ اولیه قرارداد:</h4>
         </v-col>
         <v-col cols="3">
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h4 dir="rtl" style="text-align: right; color: blue;">شماره قرارداد:</h4>
+          <h4 dir="rtl" style="text-align: right; color: black;">شماره قرارداد:</h4>
         </v-col>
         <v-col cols="3">
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h4 dir="rtl" style="text-align: right; color: blue;">مدت اولیه قرارداد:</h4>
+          <h4 dir="rtl" style="text-align: right; color: black;">مدت اولیه قرارداد:</h4>
         </v-col>
         <v-col cols="3">
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ قرارداد:</h4>
+          <h4 dir="rtl" style="text-align: right; color: black;"> تاریخ قرارداد:</h4>
         </v-col>
       </v-row>
       <v-row>
@@ -82,7 +82,7 @@
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="6">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> شاخص مبنای پیمان:</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> شاخص مبنای پیمان:</h4>
               </v-col>
               <v-col cols="7">
                 <v-select label="یک سه ماه را انتخاب کنید" :items="['اول','دوم','سوم','چهارم']"></v-select>
@@ -100,25 +100,25 @@
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب بالاسری</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> ضریب بالاسری</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب منطقه ای</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> ضریب منطقه ای</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب تجهیز کارگاه</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> ضریب تجهیز کارگاه</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب پیشنهادی پیمانکار</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> ضریب پیشنهادی پیمانکار</h4>
               </v-col>
             </v-row>
           </div>
@@ -133,19 +133,19 @@
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ ابلاغ قرارداد</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> تاریخ ابلاغ قرارداد</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ پایان قرارداد</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> تاریخ پایان قرارداد</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ اولین تحویل زمین</h4>
+                <h4 dir="rtl" style="text-align: right; color: black;"> تاریخ اولین تحویل زمین</h4>
               </v-col>
             </v-row>
           </div>
