@@ -14,7 +14,7 @@
   </form-slot>
   <form-slot v-slot:first style="width: 300%; height: 80%; border: 2px solid orangered;
   margin-left: 350pt;padding-top: auto; background-color: white;">
-  <div style="border: 2px solid orangered; border-radius: 15pt;width: 100%; height: 3%;">
+  <div style="border: 2px solid blue; border-radius: 15pt;width: 100%; height: 3%;">
     <v-row>
       <v-col cols="10">
         <v-text-field variant="none"  dir="rtl"></v-text-field>
@@ -25,7 +25,7 @@
     </v-row>
   </div>
 
-  <div style="border: 2px solid orangered; border-radius: 15pt;width: 100%; height: 3%; margin-top: 2pt;">
+  <div style="border: 2px solid blue; border-radius: 15pt;width: 100%; height: 3%; margin-top: 2pt;">
     <v-row>
       <v-col cols="10">
         <v-text-field variant="none"  dir="rtl"></v-text-field>
