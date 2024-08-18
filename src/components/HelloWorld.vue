@@ -12,7 +12,7 @@
             <h5>  *پروژه2</h5>
             <h3>مجری طرح 2</h3>
   </form-slot>
-  <form-slot v-slot:first style="width: 300%; height: 90%; border: 2px solid orangered;
+  <form-slot v-slot:first style="width: 300%; height: 80%; border: 2px solid orangered;
   margin-left: 350pt;padding-top: auto; background-color: white;">
   <div style="border: 2px solid orangered; border-radius: 15pt;width: 100%; height: 3%;">
     <v-row>
@@ -20,7 +20,7 @@
         <v-text-field variant="none"  dir="rtl"></v-text-field>
       </v-col>
       <v-col cols="2">
-        <h3 dir="rtl" style="text-align: right; color: blue;">عنوان طرح:</h3>
+        <h4 dir="rtl" style="text-align: right; color: blue;">عنوان طرح:</h4>
       </v-col>
     </v-row>
   </div>
@@ -31,18 +31,18 @@
         <v-text-field variant="none"  dir="rtl"></v-text-field>
       </v-col>
       <v-col cols="2">
-        <h3 dir="rtl" style="text-align: right; color: blue;">عنوان پروژه:</h3>
+        <h4 dir="rtl" style="text-align: right; color: blue;">عنوان پروژه:</h4>
       </v-col>
     </v-row>
   </div>
   
-  <div style="border: 2px solid orangered; margin-top: 5%; width: 100%;height: 80%;">
+  <div style="border: 2px solid orangered; margin-top: 5%; width: 100%;height: 90%;">
     <v-row>
       <v-col cols="8">
         <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
       </v-col>
         <v-col cols="4">
-          <h3 dir="rtl" style="text-align: right; color: blue;">نام پیمانکار/مشاور/آزمایشگاه:</h3>
+          <h4 dir="rtl" style="text-align: right; color: blue;">نام پیمانکار/مشاور/آزمایشگاه:</h4>
       </v-col>
     </v-row>
     
@@ -53,25 +53,25 @@
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h3 dir="rtl" style="text-align: right; color: blue;">مبلغ اولیه قرارداد:</h3>
+          <h4 dir="rtl" style="text-align: right; color: blue;">مبلغ اولیه قرارداد:</h4>
         </v-col>
         <v-col cols="3">
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h3 dir="rtl" style="text-align: right; color: blue;">شماره قرارداد:</h3>
+          <h4 dir="rtl" style="text-align: right; color: blue;">شماره قرارداد:</h4>
         </v-col>
         <v-col cols="3">
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h3 dir="rtl" style="text-align: right; color: blue;">مدت اولیه قرارداد:</h3>
+          <h4 dir="rtl" style="text-align: right; color: blue;">مدت اولیه قرارداد:</h4>
         </v-col>
         <v-col cols="3">
           <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
         </v-col>
         <v-col cols="3">
-          <h3 dir="rtl" style="text-align: right; color: blue;"> تاریخ قرارداد:</h3>
+          <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ قرارداد:</h4>
         </v-col>
       </v-row>
       <v-row>
@@ -82,7 +82,7 @@
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="6">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> شاخص مبنای پیمان:</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> شاخص مبنای پیمان:</h4>
               </v-col>
               <v-col cols="7">
                 <v-select label="یک سه ماه را انتخاب کنید" :items="['اول','دوم','سوم','چهارم']"></v-select>
@@ -100,25 +100,25 @@
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> ضریب بالاسری</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب بالاسری</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> ضریب منطقه ای</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب منطقه ای</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> ضریب تجهیز کارگاه</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب تجهیز کارگاه</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> ضریب پیشنهادی پیمانکار</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> ضریب پیشنهادی پیمانکار</h4>
               </v-col>
             </v-row>
           </div>
@@ -133,19 +133,19 @@
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> ضریب بالاسری</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ ابلاغ قرارداد</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> ضریب بالاسری</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ پایان قرارداد</h4>
               </v-col>
               <v-col cols="7">
                 <v-text-field variant="none"  dir="rtl" style="border: 2px solid gainsboro; border-radius: 10pt; height: 50%;"></v-text-field>
               </v-col>
               <v-col cols="5">
-                <h3 dir="rtl" style="text-align: right; color: blue;"> ضریب بالاسری</h3>
+                <h4 dir="rtl" style="text-align: right; color: blue;"> تاریخ اولین تحویل زمین</h4>
               </v-col>
             </v-row>
           </div>
@@ -168,8 +168,5 @@ import { defineComponent } from 'vue'
 
 #app {
   width: 300px;
-}
-.slot2{
-  
 }
 </style>
